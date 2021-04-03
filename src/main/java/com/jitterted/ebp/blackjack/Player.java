@@ -4,6 +4,7 @@ public class Player {
 
     private int playerBalance;
     private int playerBet;
+    private int totalAmountBet;
 
     public Player() {
         this.playerBalance = 0;
@@ -22,6 +23,7 @@ public class Player {
     public void playerBets(int betAmount) {
         playerBet = betAmount;
         playerBalance -= betAmount;
+        totalAmountBet += betAmount;
     }
 
     public int playerBalance() {
@@ -38,5 +40,9 @@ public class Player {
 
     public void playerTies() {
         playerBalance += playerBet * 1;
+    }
+
+    public int totalAmountBet() {
+        return totalAmountBet;
     }
 }
