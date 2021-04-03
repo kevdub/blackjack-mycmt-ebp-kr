@@ -27,4 +27,14 @@ public class PlayerTest {
         assertThat(player.totalAmountBet())
                 .isEqualTo(25);
     }
+
+    @Test
+    public void playerBets100andGetsABonusOf10() throws Exception {
+        Player player = new Player(100, 0);
+
+        player.playerBets(100);
+
+        assertThat(player.playerBalance())
+                .isEqualTo(10);
+    }
 }
